@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883144916D7ADEE6F5A2521C /* Pods_Ora_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C6F1AA05B463CC0120B849 /* Pods_Ora_Challenge.framework */; };
 		D923769E1F7023AA007F1C8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923769D1F7023AA007F1C8B /* AppDelegate.swift */; };
 		D92376A01F7023AA007F1C8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923769F1F7023AA007F1C8B /* ViewController.swift */; };
 		D92376A31F7023AA007F1C8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92376A11F7023AA007F1C8B /* Main.storyboard */; };
 		D92376A51F7023AA007F1C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D92376A41F7023AA007F1C8B /* Assets.xcassets */; };
 		D92376A81F7023AA007F1C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92376A61F7023AA007F1C8B /* LaunchScreen.storyboard */; };
+		D92376B61F7044B3007F1C8B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92376B51F7044B3007F1C8B /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25C6F1AA05B463CC0120B849 /* Pods_Ora_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ora_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35C68BCC390F0A800195D682 /* Pods-Ora Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ora Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ora Challenge/Pods-Ora Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		A521E35F3A0746A7721DF9E9 /* Pods-Ora Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ora Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ora Challenge/Pods-Ora Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		D923769A1F7023AA007F1C8B /* Ora Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ora Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D923769D1F7023AA007F1C8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D923769F1F7023AA007F1C8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		D92376A41F7023AA007F1C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D92376A71F7023AA007F1C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D92376A91F7023AA007F1C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92376B51F7044B3007F1C8B /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883144916D7ADEE6F5A2521C /* Pods_Ora_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		279E9AD9F2E16032397ABD3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25C6F1AA05B463CC0120B849 /* Pods_Ora_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BED7747E8B3EA893CE30986 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35C68BCC390F0A800195D682 /* Pods-Ora Challenge.debug.xcconfig */,
+				A521E35F3A0746A7721DF9E9 /* Pods-Ora Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D92376911F7023A9007F1C8B = {
 			isa = PBXGroup;
 			children = (
 				D923769C1F7023AA007F1C8B /* Ora Challenge */,
 				D923769B1F7023AA007F1C8B /* Products */,
+				6BED7747E8B3EA893CE30986 /* Pods */,
+				279E9AD9F2E16032397ABD3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +110,7 @@
 		D92376B41F702FC1007F1C8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D92376B51F7044B3007F1C8B /* Chat.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -95,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D92376AC1F7023AA007F1C8B /* Build configuration list for PBXNativeTarget "Ora Challenge" */;
 			buildPhases = (
+				E729A199229AF3AC1301CFBA /* [CP] Check Pods Manifest.lock */,
 				D92376961F7023AA007F1C8B /* Sources */,
 				D92376971F7023AA007F1C8B /* Frameworks */,
 				D92376981F7023AA007F1C8B /* Resources */,
+				DE35C0800F064AA228442CD1 /* [CP] Embed Pods Frameworks */,
+				A85D3F28C42DCC4857099A23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,12 +186,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A85D3F28C42DCC4857099A23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ora Challenge/Pods-Ora Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE35C0800F064AA228442CD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ora Challenge/Pods-Ora Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E729A199229AF3AC1301CFBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D92376961F7023AA007F1C8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D92376A01F7023AA007F1C8B /* ViewController.swift in Sources */,
+				D92376B61F7044B3007F1C8B /* Chat.swift in Sources */,
 				D923769E1F7023AA007F1C8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +364,7 @@
 		};
 		D92376AD1F7023AA007F1C8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C68BCC390F0A800195D682 /* Pods-Ora Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 57Y2SM9MF7;
@@ -298,6 +378,7 @@
 		};
 		D92376AE1F7023AA007F1C8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A521E35F3A0746A7721DF9E9 /* Pods-Ora Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 57Y2SM9MF7;
