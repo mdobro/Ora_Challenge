@@ -55,13 +55,37 @@
 			isa = PBXGroup;
 			children = (
 				D923769D1F7023AA007F1C8B /* AppDelegate.swift */,
-				D923769F1F7023AA007F1C8B /* ViewController.swift */,
-				D92376A11F7023AA007F1C8B /* Main.storyboard */,
-				D92376A41F7023AA007F1C8B /* Assets.xcassets */,
-				D92376A61F7023AA007F1C8B /* LaunchScreen.storyboard */,
 				D92376A91F7023AA007F1C8B /* Info.plist */,
+				D92376B41F702FC1007F1C8B /* Model */,
+				D92376B31F702FBD007F1C8B /* View */,
+				D92376B21F702FB5007F1C8B /* Controller */,
 			);
 			path = "Ora Challenge";
+			sourceTree = "<group>";
+		};
+		D92376B21F702FB5007F1C8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D923769F1F7023AA007F1C8B /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D92376B31F702FBD007F1C8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D92376A11F7023AA007F1C8B /* Main.storyboard */,
+				D92376A61F7023AA007F1C8B /* LaunchScreen.storyboard */,
+				D92376A41F7023AA007F1C8B /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D92376B41F702FC1007F1C8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +328,7 @@
 				D92376AE1F7023AA007F1C8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
