@@ -16,9 +16,11 @@ class Chat {
     var headers = [ "Content-Type" : "application/vnd.api+json", "Accept" : "application/vnd.api+json"]
     
     var delegate:ViewController!
+    
     var username:String!
     var messages = [Message]()
     
+    //called when the app starts to begin a session
     func startSession() {
         Alamofire.request(baseURL+"sessions", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch(response.result) {
@@ -32,10 +34,12 @@ class Chat {
                 self.getMessage(url: self.baseURL + "messages?page[number]=1&page[size]=10")
             case .failure(let error):
                 print(error)
+                //TODO: alert user
             }
         }
     }
     
+    //called when the app has a successful session connection to gather messages from the server
     //in production, this functions would either need to be run every few seconds to poll for new messages or, preferably, some type of notification service would be employed
     private func getMessage(url:String) {
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
@@ -61,6 +65,7 @@ class Chat {
         }
     }
     
+    //called to send a message to the server
     func sendMessage(message:String) {
         let parameters : [String : Any] = [
             "data" : [
@@ -74,7 +79,7 @@ class Chat {
             switch(response.result) {
             case .success(let value):
                 let json = JSON(value)
-                print(json)
+                //print(json)
                 //ideally, we'd use info returned from the server, but for now I'll use local info to make the app feel better to use
                 let formattedDate = self.formatDate(date: Date())
                 self.messages.append(Message(user: self.username, date: formattedDate.0, time: formattedDate.1, message: message))
