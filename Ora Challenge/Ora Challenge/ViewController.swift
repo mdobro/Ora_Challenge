@@ -146,7 +146,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func sendButtonPress(_ sender: Any) {
         if let text = inputTextField.text {
-            chatClient.sendMessage(message: text)
+            if text != "" {
+                chatClient.sendMessage(message: text)
+            }
         }
         inputTextField.text = ""
     }
