@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,43 +27,67 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Al-TK-xSD" userLabel="Log Out View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Navigation" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-7Z-dsP" userLabel="Background">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Navigation" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-7Z-dsP" userLabel="Background">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="UGV-7Z-dsP" secondAttribute="height" multiplier="375:667" id="pCX-Sx-4Kf"/>
-                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG OUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-xJ-pF9">
-                                        <rect key="frame" x="35" y="587" width="72" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="JAL-6K-Zwp"/>
-                                            <constraint firstAttribute="width" constant="72" id="bnx-0U-dAO"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG OUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-xJ-pF9">
+                                        <rect key="frame" x="35" y="559" width="332" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZf-j8-VWa">
-                                        <rect key="frame" x="35" y="616" width="72" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZf-j8-VWa">
+                                        <rect key="frame" x="35" y="594" width="332" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="yEo-lK-3py"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORA CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sax-R2-csw">
+                                        <rect key="frame" x="35" y="113" width="318" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="mEx-Ok-aH3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TdU-8X-3WT" userLabel="Line">
+                                        <rect key="frame" x="35" y="550" width="240" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="UPK-Su-WaD"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="trailing" secondItem="XZf-j8-VWa" secondAttribute="trailing" id="2MI-lF-Ft4"/>
-                                    <constraint firstItem="XZf-j8-VWa" firstAttribute="top" secondItem="DDb-xJ-pF9" secondAttribute="bottom" constant="8" symbolic="YES" id="Czb-2p-Wvc"/>
+                                    <constraint firstAttribute="trailing" secondItem="UGV-7Z-dsP" secondAttribute="trailing" id="06V-up-5u8"/>
+                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="trailing" secondItem="2Al-TK-xSD" secondAttribute="trailingMargin" id="0NI-dN-aeQ"/>
+                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="top" secondItem="TdU-8X-3WT" secondAttribute="bottom" constant="8" symbolic="YES" id="1m1-YL-phd"/>
+                                    <constraint firstAttribute="bottom" secondItem="UGV-7Z-dsP" secondAttribute="bottom" id="2pJ-Ey-Eul"/>
+                                    <constraint firstAttribute="bottom" secondItem="DDb-xJ-pF9" secondAttribute="bottom" constant="66" id="31k-B4-cCX"/>
+                                    <constraint firstItem="sax-R2-csw" firstAttribute="top" secondItem="2Al-TK-xSD" secondAttribute="top" constant="113" id="3jr-0J-KD5"/>
+                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="trailing" secondItem="XZf-j8-VWa" secondAttribute="trailing" id="5F1-Ro-Tqo"/>
+                                    <constraint firstAttribute="trailing" secondItem="TdU-8X-3WT" secondAttribute="trailing" constant="100" id="AFN-Tf-m8e"/>
+                                    <constraint firstItem="sax-R2-csw" firstAttribute="leading" secondItem="TdU-8X-3WT" secondAttribute="leading" id="AIj-ij-XUg"/>
+                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="leading" secondItem="XZf-j8-VWa" secondAttribute="leading" id="FlN-tj-OjO"/>
                                     <constraint firstAttribute="bottom" secondItem="UGV-7Z-dsP" secondAttribute="bottom" id="UBa-3Y-wbk"/>
                                     <constraint firstItem="UGV-7Z-dsP" firstAttribute="leading" secondItem="2Al-TK-xSD" secondAttribute="leading" id="XMw-xp-eUI"/>
-                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="leading" secondItem="XZf-j8-VWa" secondAttribute="leading" id="dXN-AT-8Q4"/>
+                                    <constraint firstItem="UGV-7Z-dsP" firstAttribute="top" secondItem="2Al-TK-xSD" secondAttribute="top" id="XQw-UO-cDP"/>
                                     <constraint firstAttribute="trailing" secondItem="UGV-7Z-dsP" secondAttribute="trailing" id="dZx-lz-NzS"/>
-                                    <constraint firstItem="DDb-xJ-pF9" firstAttribute="leading" secondItem="2Al-TK-xSD" secondAttribute="leading" constant="35" id="fi6-sI-kjM"/>
-                                    <constraint firstAttribute="bottom" secondItem="XZf-j8-VWa" secondAttribute="bottom" constant="39" id="rRi-f7-0tU"/>
+                                    <constraint firstAttribute="bottom" secondItem="XZf-j8-VWa" secondAttribute="bottom" constant="40" id="eOE-3e-wtr"/>
+                                    <constraint firstItem="XZf-j8-VWa" firstAttribute="top" secondItem="TdU-8X-3WT" secondAttribute="bottom" constant="43" id="m2L-Pi-V11"/>
+                                    <constraint firstAttribute="trailing" secondItem="sax-R2-csw" secondAttribute="trailing" constant="22" id="sDn-GD-i6d"/>
+                                    <constraint firstItem="TdU-8X-3WT" firstAttribute="leading" secondItem="DDb-xJ-pF9" secondAttribute="leading" id="uT8-kY-JYv"/>
+                                    <constraint firstItem="sax-R2-csw" firstAttribute="leading" secondItem="2Al-TK-xSD" secondAttribute="leading" constant="35" id="w7N-eU-eUo"/>
                                     <constraint firstItem="UGV-7Z-dsP" firstAttribute="top" secondItem="2Al-TK-xSD" secondAttribute="top" id="xlU-b6-JMW"/>
+                                    <constraint firstItem="UGV-7Z-dsP" firstAttribute="leading" secondItem="2Al-TK-xSD" secondAttribute="leading" id="zvS-2j-39t"/>
                                 </constraints>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-zM-ewP">
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-zM-ewP" userLabel="Chat View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-KI-CaB">
