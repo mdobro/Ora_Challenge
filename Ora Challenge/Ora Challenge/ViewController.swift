@@ -26,6 +26,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         chatTable.allowsSelection = false
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .none
+        dateLabel.text = dateFormatter.string(from: Date())
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
@@ -89,7 +94,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func sendButtonPress(_ sender: UIButton) {
-        print("send: \(inputTextField.text!)")
+        if let text = inputTextField.text {
+            chatClient.sendMessage(message: text)
+        }
         self.view.endEditing(true)
         inputTextField.text = ""
     }
