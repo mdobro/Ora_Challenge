@@ -202,6 +202,7 @@
                         <outlet property="chatTable" destination="K8m-R1-D9u" id="MHm-pP-amN"/>
                         <outlet property="dateLabel" destination="Rxk-BI-IEQ" id="vPk-5W-CyR"/>
                         <outlet property="inputTextField" destination="BZF-F8-J0H" id="JMS-zb-hQH"/>
+                        <outlet property="keyboardHeightLayoutConstraint" destination="Fih-bU-DpP" id="d9y-ih-lNq"/>
                         <outlet property="userLabel" destination="5Kb-b8-cki" id="r46-aW-cWm"/>
                     </connections>
                 </viewController>
