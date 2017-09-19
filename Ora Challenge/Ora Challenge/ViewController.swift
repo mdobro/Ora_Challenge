@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backgroundUserLabel: UILabel!
     
     let chatClient = Chat()
 
@@ -25,9 +26,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         chatClient.startSession()
         
         chatTable.allowsSelection = false
+        chatTable.tableFooterView = UIView() //gets rid of extra seperator lines
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
+        dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         dateLabel.text = dateFormatter.string(from: Date())
         
@@ -49,6 +51,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func reloadChat() {
         chatTable.reloadData()
+    }
+    
+    func updateUserName(username:String) {
+        self.userLabel.text = username
+        self.backgroundUserLabel.text = username
+        self.inputTextField.placeholder = "Write something \(username)..."
     }
     
     @objc func keyboardNotification(notification:NSNotification) {
@@ -90,7 +98,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: IBAction Methods
     
     @IBAction func barButtonPress(_ sender: UIBarButtonItem) {
-        print("bar button press")
+        UIView.animate(withDuration: 1, animations: {
+            let distance:CGFloat = 250
+            if let chatView = self.view.viewWithTag(1) {
+                if chatView.frame.origin.x == 0 {
+                    chatView.frame.origin.x += distance
+                } else {
+                    chatView.frame.origin.x -= distance
+                }
+            }
+        })
     }
     
     @IBAction func sendButtonPress(_ sender: UIButton) {

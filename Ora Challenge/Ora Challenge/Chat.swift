@@ -28,7 +28,7 @@ class Chat {
                 let responseHeaders = response.response!.allHeaderFields
                 self.headers["Authorization"] = (responseHeaders["Authorization"] as! String)
                 self.username = json["included"][0]["attributes"]["username"].stringValue
-                self.delegate.userLabel.text = self.username
+                self.delegate.updateUserName(username: self.username)
                 self.getMessage(url: self.baseURL + "messages?page[number]=1&page[size]=10")
             case .failure(let error):
                 print(error)
@@ -90,7 +90,7 @@ class Chat {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "MMM d"
-        let dateString = dateFormatter.string(from: date)
+        let dateString = dateFormatter.string(from: date) + ","
         dateFormatter.dateFormat = "hh:mma"
         let timeString = dateFormatter.string(from: date)
         return (dateString, timeString)
